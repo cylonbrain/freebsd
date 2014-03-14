@@ -12,9 +12,11 @@ sasidled_prefix="/usr/local"
 
 name="sasidled"
 command_interpreter="/bin/sh"
-rcvar=`set_rcvar`
+rcvar="${name}_enable"
 
 load_rc_config $name
+: ${sasidled_enable:=NO}
+
 
 command="${sasidled_cmdpath-/usr/local/bin}/sasidle"
 command_args="${sasidled_args}"

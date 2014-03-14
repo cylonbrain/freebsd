@@ -236,9 +236,9 @@ while [ true ]; do
             case "${DISK}" in
                 *ada*)
                     if [ "${DOSTOP}" ]; then
-                        [ "${INFO}" ] && _log "ataidle -S 5 /dev/${DISK}"
-                        [   "${ASYNC}" ] && ataidle -S 5 /dev/${DISK} &
-                        [ ! "${ASYNC}" ] && ataidle -S 5 /dev/${DISK}
+                        [ "${INFO}" ] && _log "/usr/local/sbin/ataidle -S 5 /dev/${DISK}"
+                        [   "${ASYNC}" ] && /usr/local/sbin/ataidle -S 5 /dev/${DISK} &
+                        [ ! "${ASYNC}" ] && /usr/local/sbin/ataidle -S 5 /dev/${DISK}
                     else
                         [ "${INFO}" ] && _log "#ataidle -S 5 ${DISK}"
                     fi
