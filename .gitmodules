@@ -1,0 +1,3 @@
+[submodule "freebsd-dtrace-tools"]
+	path = freebsd-dtrace-tools
+	url = https://github.com/kassandry/freebsd-dtrace-tools.git
